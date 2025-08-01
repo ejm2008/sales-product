@@ -7,7 +7,6 @@
   min-height: 100vh;
 }
 
-/* Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -41,7 +40,6 @@
   font-weight: 500;
 }
 
-/* Filters Styles */
 .filters {
   display: flex;
   gap: 20px;
@@ -81,7 +79,6 @@
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* Chart Title */
 .chart-title {
   text-align: center;
   font-size: 18px;
@@ -91,7 +88,6 @@
   padding: 10px;
 }
 
-/* Chart Container */
 .chart-container {
   background-color: white;
   padding: 20px;
@@ -100,7 +96,6 @@
   min-height: 400px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .filters {
     flex-direction: column;

@@ -9,10 +9,8 @@ export interface FilterOptions {
   brands: string[];
 }
 
-// Fixed months for all data
 export const months = ["Janeiro", "Fevereiro", "Março", "Abril"];
 
-// Comprehensive data structure with specific sales data for each filter combination
 export const comprehensiveSalesData: Record<string, Record<string, Record<string, number[]>>> = {
   "Comida": {
     "Fruta": {

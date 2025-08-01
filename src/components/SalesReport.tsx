@@ -28,7 +28,6 @@ const SalesReport: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState('Fruta');
   const [selectedBrand, setSelectedBrand] = useState('Frutas3');
 
-  // Get the sales data based on current filter selections
   const currentSalesData = useMemo(() => {
     
       const salesValues = comprehensiveSalesData[selectedCategory]?.[selectedProduct]?.[selectedBrand];
@@ -38,7 +37,6 @@ const SalesReport: React.FC = () => {
           sales: salesValues[index]
         }));
       }
-      // Fallback to default data if combination doesn't exist
       return months.map((month, index) => ({
         month,
         sales: [150, 480, 320, 280][index]
@@ -49,7 +47,7 @@ const SalesReport: React.FC = () => {
     labels: currentSalesData.map(item => item.month),
     datasets: [
       {
-        label: 'Ventas',
+        label: 'Vendas',
         data: currentSalesData.map(item => item.sales),
         borderColor: 'rgb(59, 130, 246)',
         backgroundColor: 'rgba(59, 130, 246, 0.5)',
@@ -91,17 +89,16 @@ const SalesReport: React.FC = () => {
 
   return (
     <div className="sales-report">
-      {/* Header */}
+
       <div className="header">
         <div className="header-left">Menu</div>
         <div className="header-center">
-          <span>User Name</span>
+          <span> Usuário</span>
           <div className="status-indicator"></div>
         </div>
-        <div className="header-right">Sales Report</div>
+        <div className="header-right">Relatório de vendas</div>
       </div>
 
-      {/* Filters */}
       <div className="filters">
         <div className="filter-group">
           <label>Categoria:</label>
@@ -140,7 +137,6 @@ const SalesReport: React.FC = () => {
         </div>
       </div>
 
-      {/* Chart */}
       <div className="chart-container">
         <Line data={chartData} options={chartOptions} />
       </div>
